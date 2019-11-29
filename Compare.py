@@ -1,8 +1,8 @@
 import cv2
 import numpy as np
 #Para los soniditos
-from pydub import AudioSegment
-from pydub.playback import play
+#from pydub import AudioSegment
+#from pydub.playback import play
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 
@@ -23,9 +23,9 @@ def comparar(ttl):
 			
 		cv2.imwrite("Resultados/temporal_{}.jpg".format(ttl), difference)
 		#Codigo para el sonidito
-		fname = "/home/nimperii/SauronScanner/OOT_Navi_Hello1.wav"
-		mysong = AudioSegment.from_mp3(fname)
-		play(mysong)
+		#fname = "/home/nimperii/SauronScanner/OOT_Navi_Hello1.wav"
+		#mysong = AudioSegment.from_mp3(fname)
+		#play(mysong)
 
 		print ("Las imagen {} es diferente.".format(ttl))
 		

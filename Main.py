@@ -1,9 +1,8 @@
 import os
 import glob
 import configparser
-import Compare
+import Compare2
 import setup
-
 
 #Comprueba si existen las carpetas, si no existen, las crea
 stp= setup.stp()
@@ -24,7 +23,7 @@ while 1:
 		#Compara si la cant en la carpeta es diferente al cache
 		if ttl != cnum:
 			#Si es diferente ejecuta las comparaciones de muestra
-			res= Compare.comparar(ttl)
+			res= Compare2.comparar(ttl)
 			cnums= str(ttl)
 			cache.set('var', 'ttl', cnums)
 			#Y actualiza el valor en el cache por el valor actual

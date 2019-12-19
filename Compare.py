@@ -21,7 +21,8 @@ def comparar(ttl):
 
 	else:
 			
-		cv2.imwrite("Resultados/temporal_{}.jpg".format(ttl), difference)
+		cv2.imwrite("Resultados/temporal_{}.jpg".format(ttl), imagen2)
+		cv2.imwrite("Resultados/temporal_invert_{}.jpg".format(ttl), difference)
 		#Codigo para el sonidito
 		#fname = "/home/nimperii/SauronScanner/OOT_Navi_Hello1.wav"
 		#mysong = AudioSegment.from_mp3(fname)
@@ -31,5 +32,8 @@ def comparar(ttl):
 		
 		img=mpimg.imread("Resultados/temporal_{}.jpg".format(ttl))
 		imgplot = plt.imshow(img)
+		plt.show()
+		img1=mpimg.imread("Resultados/temporal_invert_{}.jpg".format(ttl))
+		imgplot = plt.imshow(img1)
 		plt.show()
 	return("Done")
